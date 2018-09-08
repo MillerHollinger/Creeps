@@ -82,7 +82,8 @@ public class CreepsGame
       println("| ### #  # ### ### #   ### |");                                                                      
       println("C-RANDOM--COLLECTING--GAME-C");
       println("");
-      println("   CREEPS - An adventure by Miller Hollinger");
+      println("   CREEPS - An adventure by MillerHollinger");
+      println("     v1.0.0"); // Version Number
       
       mainMenu();
       
@@ -210,7 +211,7 @@ public class CreepsGame
                         
                         world.world[row][col].contents = ".";
                         
-                        if (towerTop == 9)
+                        if (towerTop >= 9)
                            win();
                      }
                      else
@@ -232,7 +233,7 @@ public class CreepsGame
       println("You enter a town.");
       println("You'll run back here if you get into trouble.");
       nextLine();
-      resRow = row;
+      resRow = row; // Save revive location
       resCol = col;
       while(true)
       {
@@ -307,7 +308,7 @@ public class CreepsGame
                   }
                }
                else
-                  println("You're not allowed to sell creeps unless your party is full.");
+                  println("You're not allowed to sell creeps unless your party is full (3 Creeps).");
                break;
          //See Storage------------------------------------
             case 4:
@@ -328,7 +329,7 @@ public class CreepsGame
                }
                else //0 creeps in storage 
                {
-                  println("There is no storage to see. Go battle wild Creeps to get some!");
+                  println("There are no Creeps in your storage. Go battle wild Creeps to get some!");
                }
                break;
          //Exchange Creeps------------------------------------
@@ -537,7 +538,7 @@ public class CreepsGame
          {
             println("Are you ready to leave? (Y/N)");
             if (yes())    
-               println("Bye! If you ever want to upgrade your Creeps, remember us.");
+               println("Bye! If you ever want to get new Creeps, remember us.");
             else
                shop(false);
          }
@@ -587,7 +588,7 @@ public class CreepsGame
       nextLine();
       println("You can keep playing. I'd suggest going to a town to save right now.");
       println("Level 50 is still the cap level, but you can still encounter creeps of a higher level than 50.");
-      println("Thanks for playing Creeps. If you have any great ideas for updates, tell me, Miller Hollinger. Bye!");
+      println("Thanks for playing Creeps. If you have any great ideas for updates, tell me, MillerHollinger. Bye!");
       nextLine();
       //[!]GENERATE FINAL SCORE
       

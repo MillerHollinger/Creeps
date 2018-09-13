@@ -5,7 +5,6 @@
 //HP: Health. Go longer without dying.
 //PWR: Attack power. Hit harder.
 //DEF: Defense. Take less damage.
-//SPC: Special power. Hit harder with the special attack.
 //Player has a level, which determines how powerful randomly encountered creeps are.
 //Player also has money, which they use to buy new, better creeps.
 //The world has several blocks.
@@ -20,19 +19,13 @@
 // + : The player.
 
 /*
-TO DO
--Playtest
-
 EXTRA CONTENT - Post-completion
--Add easter eggs in Town choices
 -Special random events (Make use of "?" Tile)
+-Don't lose turn when trying to attack without enough energy
 -"Hyper Ultimate" creeps that have special names and pre-programmed stats/attacks
 -Switch creeps during battle
--Towns are actual places -- have sections like the map
--Cities with more things to do / battle towers are cities?
--Evolve rarity of a creep with [S]
 -Lightly encrypt savegame
--Three specially made quests that give the player a second thign to do aside beating the battle towers
+-Three specially made quests that give the player a second thing to do aside beating the battle towers
 */
 import java.util.*;
 public class CreepsGame
@@ -56,7 +49,7 @@ public class CreepsGame
    
    //The player's lvl and xp.
    static int pLVL = 1;
-   static int pXP = 1000;
+   static int pXP = 0;
    
    //The player's money, called shine or [S].
    static int shine = 0;
@@ -83,7 +76,7 @@ public class CreepsGame
       println("C-RANDOM--COLLECTING--GAME-C");
       println("");
       println("   CREEPS - An adventure by MillerHollinger");
-      println("     v1.0.0"); // Version Number
+      println("     v1.0.1"); // Version Number
       
       mainMenu();
       
@@ -287,7 +280,7 @@ public class CreepsGame
                else
                   println("Continuing.");            
                break;
-         //Buy Creeps------------------------------------
+         //Buy or Upgrade Creeps------------------------------------
             case 2:
                shop(true);
                break;
@@ -646,7 +639,7 @@ public class CreepsGame
             println("+ > READY CREEP < +");
             println(creeps.get(0).getCard());
             println("");
-            println("#- (1 2 3): Attack | (0): Rest | (Other): Run -#");
+            println("#- (1 2 3): Attack | (6): Swap Creep | (0): Rest | (Other): Run -#");
          
             int pick = userInt();
          
@@ -683,6 +676,26 @@ public class CreepsGame
                creeps.get(0).eng += creeps.get(0).maxENG / 6 + creeps.get(0).def;
                if (creeps.get(0).eng > creeps.get(0).maxENG)
                   creeps.get(0).eng = creeps.get(0).maxENG; 
+            }
+            else if (pick == 6) // TODO Swap creeps
+            {
+            	if (creeps.size() >= 2)
+            	{
+	            	println("What Creep will you swap to?");
+	            	for (int i = 0; i < creeps.size(); i++)
+	            		println((i + 1) + " : " + storage.get(i).name + " | " + storage.get(i).level + " " + storage.get(i).rarString());
+	            	pick = userInt() - 1;
+	            	if (pick < 0 || pick >= creeps.size())
+		            	println("That number is invalid.");
+	            	else
+	            		println("Swapping to Creep number " + pick + ".");
+	            	Creep temp = creeps.get(0);
+	            	creeps.set(0, creeps.get(pick));
+	            	creeps.set(pick, temp);
+	            	println("Swapped.");
+            	}
+            	else
+            		println("You don't have any other Creeps left standing!");
             }
             else //Attempt a run.
             {

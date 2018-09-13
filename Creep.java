@@ -11,7 +11,6 @@
 //HP: Health. Go longer without dying.
 //PWR: Attack power. Hit harder.
 //DEF: Defense. Take less damage.
-//SPC: Special power. Hit harder with the special attack.
 //ENG: Energy. Stronger attacks use this. When it runs out, the creep's health is set to 0.
 //Attacks: Three.
 import java.util.Random;

@@ -252,17 +252,16 @@ public class CreepsGame {
                   creeps.get(i).eng = creeps.get(i).maxENG;
                }
                println("Healing complete. Your creeps are ready for action.");
-               println("Show save data? (Y/N)");
+               println("Save game? (Y/N)");
                if (yes()) {
                   if (creeps.size() == 3) {
                      if (storage.size() == 0) {
-                        println("Fetching save. Please wait.");
-                        println(getSave());
                         try
                         {
                            if (new File("save").exists())
                               ClearFile("save");
                            AppendFile("save", getSave());
+                           println("Success! Game saved.");
                         }
                         catch (Exception e){}
                      } else {
@@ -817,18 +816,22 @@ public class CreepsGame {
                break;
             case 2:
                println("Are you sure you want to load a new game? (Y/N)");
-               if (yes()) {
-                  println("Loading game. Enter your save data.");
-                  if (load(userString())) {
-                     println("Load was a success. Starting game.");
-                     nextLine();
-                     return;
-                  } else {
-                     println("Failed to load. Make sure your data is exactly as it was printed out.");
-                     println("Check your data and then hit RUN again.");
-                  }
-               } else
-                  println("Returning to main menu.");
+				if (yes()) {
+					println("Loading game...");
+					try {
+						if (load(ReadFile("save"))) {
+							println("Load was a success. Starting game.");
+							nextLine();
+							return;
+						} else {
+							println("Failed to load. Make sure your data is exactly as it was printed out.");
+							println("Check your data and then hit RUN again.");
+						}
+					} catch (Exception e) {
+						println("Failed to load. Assure a save exists and is correctly formatted.");
+					}
+				} else
+					println("Returning to main menu.");
                break;
             case 3:
                println("Begin tutorial? (Y/N)");
@@ -960,23 +963,16 @@ public class CreepsGame {
    
    public static void AppendFile(String name, String toAdd) throws Exception// appends text to the given file, or creates it
    {
-      if (!(new File(name).exists()))
-      {
-         FileWriter libraryf = new FileWriter("library", true);
-         PrintWriter libraryp = new PrintWriter(libraryf);
-         libraryp.printf("%s" + "%n" , name);
-         libraryp.close();
-      }
       FileWriter filew = new FileWriter(name, true);
       PrintWriter writer = new PrintWriter(filew);
-      writer.printf("%s" + "%n" , toAdd);
+      writer.printf("%s" , toAdd);
       writer.close();
    }
    public static void ClearFile(String name) throws Exception// clears a file of all data
    {
       FileWriter filew = new FileWriter(name, false);
       PrintWriter writer = new PrintWriter(filew);
-      writer.printf("%s" + "%n" , "");
+      writer.printf("%s" , "");
       writer.close();
    }
    public static String ReadFile(String name) throws Exception // reads a file

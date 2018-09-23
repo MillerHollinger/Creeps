@@ -170,11 +170,11 @@ public class Creep
    {
       //The name sections.
       String[] first = 
-         {"Pha","Con","Ya","Sil","Gan","Illo","Apa","Dil","Bel","Xo","Kat","Cor","Sul","Eng","Uld","Uma","Eka","Sis","Ur","Pard","Sul","Kar","Bul","Ma","Tur","Ola","Sela","Terr","Yet","Ila","Dila","Amba","Usa","Mala","Kik"};
+         {"Pha","Con","Ya","Sil","Gan","Ta","Zha","Quk","Illo","Apa","Dil","Bel","Xo","Kat","Cor","Sul","Eng","Uld","Uma","Eka","Sis","Ur","Pard","Sul","Kar","Bul","Ma","Tur","Ola","Sela","Terr","Yet","Ila","Dila","Amba","Usa","Mala","Kik"};
       String[] second = 
-         {"man","al","an","est","he","de","ma","cor","del","abba","ja","a","e","i","o","u","vit","za","ka","ki","erin","opa","bes","tul","mac","gola","vol","vet","geva","jenu","jeri","caxi","turo","pon","xan"};
+         {"man","al","an","est","he","de","ma","cor","del","abba","zu","ja","a","e","i","o","u","vit","za","ka","ki","erin","opa","bes","tul","mac","gola","vol","vet","geva","jenu","jeri","caxi","turo","pon","xan"};
       String[] third = 
-         {"ic","a","dum","ija","vun","ipa","na","t","la","iom","till","tela","ola","ra","sa","ba","io","uun","ca","ita","ium","iya","ista","un","eun","i","ji","li","quet","met","evo","con","fes","tur","ki"};
+         {"ic","a","dum","ija","vun","ipa","na","t","la","iom","till","tela","ola","ra","sa","ba","io","uun","ca","ita","ium","iya","ista","un","eun","i","ji","li","quet","met","evo","con","fes","tur","ki","bo"};
          
       Random rn = new Random();
       

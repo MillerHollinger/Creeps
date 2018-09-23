@@ -107,11 +107,12 @@ public class Attack
       String[] first = 
          {"Terra","Super","Mega","Instant","Fast","Hyper","Iron","Poison","Venom","Light","Shadow","Volt",
          "Lightning","Flame","Jet","Jolt","Water","Hydra","Freeze","Magic","Flying","Spinning","Rocket",
-         "Time","Blast","Backwards","Silent","Quick","Electric","Water","Knockout","Doom","Light","Dark"};
+         "Time","Blast","Backwards","Silent","Quick","Electric","Water","Knockout","Doom","Light","Dark", 
+         "Stealthy"};
       String[] second =
          {"Strike","Blast","Punch","Flash","Slash","Burst","Star","Crash","Tackle","Fist","Kick","Dash","Roll",
-         "Rumble","Stab","Explosion","Dash","Blast","Uppercut","Slap","Slice","Whip","Gash","Gash",
-         "Burst","Lunge","Spin","Flip"};
+         "Rumble","Stab","Explosion","Dash","Blast","Uppercut","Slap","Slice","Whip","Gash","Bash", "Ball", "Spike",
+         "Burst","Lunge","Spin","Flip", "Lance", "Jab", "Beam"};
       String rarMod = "{ERROR}";
       switch (rarity)
       {

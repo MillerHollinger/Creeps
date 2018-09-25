@@ -8,10 +8,10 @@ There is a tutorial built into the game, just request it on the main menu.
 No setup is required. Simply run it and use the console to play the game.
 
 ## Included Files
-Attack.java : Class for the data of one attack.
-Creep.java : Class for the data of one creep.
-**CreepsGame.java : The game. Run this file to play.**
-Tile.java : Class for the data of one tile.
-World.java : Class which stores the data of one random world.
+Attack.java : Class for the data of one attack.  
+Creep.java : Class for the data of one creep.  
+**CreepsGame.java : The game. Run this file to play.**  
+Tile.java : Class for the data of one tile.  
+World.java : Class which stores the data of one random world.  
 
 Thanks for playing.

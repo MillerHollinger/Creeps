@@ -1,4 +1,4 @@
-//This game is effecively randomly generated open-world pokemon
+//This game is effectively randomly generated open-world pokemon
 //Monsters are called Creeps (Game is called Creeps). You can hold three and store infinity.
 //Creeps have LV, HP, PWR, DEF, SPC, and three attacks, one of which is special. They also have rarity. Rarer ones have higher stats (For their level)
 //LV: Level. Higher means harder to level up and more powerful.
@@ -26,6 +26,10 @@ EXTRA CONTENT - Post-completion
 -Switch creeps during battle
 -Lightly encrypt savegame
 -Three specially made quests that give the player a second thing to do aside beating the battle towers
+TOFIX - Do this to balance!
+-Event creeps need to be relevant to the player. Players LV or +1.
+-Creeps you encounter are between 
+
 */
 import java.util.*;
 import java.awt.AWTException;

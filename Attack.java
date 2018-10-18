@@ -74,7 +74,7 @@ public class Attack
    {
       level = lv;
       genRarity(creepRar);
-      genStats(lv, creepRar);
+      genStats(lv, rarity);
       genName();
    }
    
@@ -82,7 +82,7 @@ public class Attack
    public void genStats(int lv, int rar)
    {
       Random rn = new Random();
-      str = rn.nextInt(lv + rar) + lv + rar;
+      str = rn.nextInt(lv + (rar/2)) + lv + rar;
       exh = str * (rn.nextInt(lv) + 1) + 1;
       spd = exh - rn.nextInt(str + 1) + rar;
    }

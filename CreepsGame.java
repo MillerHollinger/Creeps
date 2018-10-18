@@ -21,7 +21,6 @@
 /*
 EXTRA CONTENT - Post-completion
 -Special random events (Make use of "?" Tile)
--Don't lose turn when trying to attack without enough energy
 -"Hyper Ultimate" creeps that have special names and pre-programmed stats/attacks
 -Lightly encrypt savegame
 -Three specially made quests that give the player a second thing to do aside beating the battle towers

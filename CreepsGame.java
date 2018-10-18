@@ -23,12 +23,12 @@ EXTRA CONTENT - Post-completion
 -Special random events (Make use of "?" Tile)
 -Don't lose turn when trying to attack without enough energy
 -"Hyper Ultimate" creeps that have special names and pre-programmed stats/attacks
--Switch creeps during battle
 -Lightly encrypt savegame
 -Three specially made quests that give the player a second thing to do aside beating the battle towers
+
 TOFIX - Do this to balance!
--Event creeps need to be relevant to the player. Players LV or +1.
--Creeps you encounter are between 
+-Creeps you encounter are more relevant to your level
+-Rarity less powerful
 
 */
 import java.util.*;

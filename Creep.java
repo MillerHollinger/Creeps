@@ -95,6 +95,8 @@ public class Creep
       Random rn = new Random();
       if (loc.equals("C") || loc.equals("M") || loc.equals("#"))
          level = plyrLVL;
+      else if (loc.equals("!"))
+    	  	level = plyrLVL + rn.nextInt(2);
       else
          level = plyrLVL + rn.nextInt(3) - 1;
       if (level <= 0) level = 1;

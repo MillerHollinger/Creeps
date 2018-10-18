@@ -159,7 +159,7 @@ public class Creep
    public void genStats()
    {
       Random rn = new Random();
-      maxHP = level * 7 + rn.nextInt(level * 3 + rarity) + 1;
+      maxHP = level * 7 + rn.nextInt(level * 3 + rarity * 2) + 1;
       hp = maxHP;
       pwr = level + rn.nextInt(level / 3 + rarity / 2) + 1;
       def = level / 2 + rn.nextInt(level / 2 + rarity) + 1;

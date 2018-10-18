@@ -161,7 +161,7 @@ public class Creep
       Random rn = new Random();
       maxHP = level * 7 + rn.nextInt(level * 3 + rarity * 2) + 1;
       hp = maxHP;
-      pwr = level + rn.nextInt(level / 3 + rarity / 2) + 1;
+      pwr = level + rn.nextInt(level / 3 + rarity / 2 + 1) + 1;
       def = level / 2 + rn.nextInt(level / 2 + rarity) + 1;
       maxENG = hp * level + rn.nextInt(maxHP + level) + 1;
       eng = maxENG;
